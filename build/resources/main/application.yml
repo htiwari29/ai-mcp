@@ -11,8 +11,8 @@ spring:
 #    bedrock:
 #      aws:
 #        region: us-east-1
-#        access-key: AKIASIG7HZ4BNO44INUU
-#        secret-key: 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
+#        access-key: abc
+#        secret-key: def
 #      cohere:
 #        embedding:
 #          model: cohere.embed-english-v3
@@ -22,15 +22,15 @@ spring:
 #    vectorstore:
 #      mongodb:
 #        initialize-schema: true
-
-
-
+#
+#
+#
 #logging:
 #  level:
 #    root: info
-##    org.springframework.data.mongodb.core.MongoTemplate: DEBUG
-##    org.springframework.data.mongodb.repository.Query: DEBUG
-##    org.mongodb.driver: error
+#    org.springframework.data.mongodb.core.MongoTemplate: DEBUG
+#    org.springframework.data.mongodb.repository.Query: DEBUG
+#    org.mongodb.driver: error
 #  pattern:
 #    console: "%d{dd-MM-yyyy HH:mm:ss.SSS,UTC} [%thread] %-5level %X{Request-ID} %X{tenant} %logger.%M - %msg%n"
 server:
