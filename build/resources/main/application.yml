@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: Operation Manager
+#  data:
+#    mongodb:
+#      uri: mongodb+srv://optimus:QS8E53mSzHflQnh5@optimus.mwhahsl.mongodb.net/hackathon?retryWrites=true&w=majority
+#      database: hackathon
+#  ai:
+#    model:
+#      embedding: cohere
+#    bedrock:
+#      aws:
+#        region: us-east-1
+#        access-key: AKIASIG7HZ4BNO44INUU
+#        secret-key: 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
+#      cohere:
+#        embedding:
+#          model: cohere.embed-english-v3
+#    chat:
+#      client:
+#        enabled: true
+#    vectorstore:
+#      mongodb:
+#        initialize-schema: true
+
+
+
+#logging:
+#  level:
+#    root: info
+##    org.springframework.data.mongodb.core.MongoTemplate: DEBUG
+##    org.springframework.data.mongodb.repository.Query: DEBUG
+##    org.mongodb.driver: error
+#  pattern:
+#    console: "%d{dd-MM-yyyy HH:mm:ss.SSS,UTC} [%thread] %-5level %X{Request-ID} %X{tenant} %logger.%M - %msg%n"
+server:
+  port: 8090
+
