@@ -28,99 +28,99 @@
 <!--</body>-->
 <!--</html>-->
 
-<!--<!DOCTYPE html>-->
-<!--<html lang="en">-->
-<!--<head>-->
-<!--    <meta charset="UTF-8">-->
-<!--    <title>Operation Manager</title>-->
-<!--    <link rel="stylesheet" href="style.css">-->
-<!--</head>-->
-<!--<body>-->
-<!--<div class="chat-container">-->
-<!--    <h2>Operation Manager</h2>-->
-<!--    <div class="chat-box" id="chat-box"></div>-->
-<!--    <div class="input-area">-->
-<!--        <input type="text" id="user-input" placeholder="Ask a question..." />-->
-<!--        <button onclick="sendMessage()">➤</button>-->
-<!--    </div>-->
-<!--</div>-->
-
-<!--<script src="script.js"></script>-->
-<!--</body>-->
-<!--</html>-->
-
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script type="text/javascript" src="https://analytics.franconnectuat.net/MicroStrategyLibrary/javascript/embeddinglib.js"></script>
+    <meta charset="UTF-8">
+    <title>Operation Manager</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="f-drawer-body f-char-coat-container" id="DataAnalystBoatContainer" style="display: none;">
-    <div class="f-drawer-header fc--flex">
-        <div class="svg-icon icon-size-24" data-svg-role="f-ai"></div>
-        <div class="fc--flex-2 fc--flex-v-center">Data Analyst</div>
-        <div class="f-close-button f-close-drawer" onclick="closeChatBoat(this);">X</div>
+<div class="chat-container">
+    <h2>Operation Manager</h2>
+    <div class="chat-box" id="chat-box"></div>
+    <div class="input-area">
+        <input type="text" id="user-input" placeholder="Ask a question..." />
+        <button onclick="sendMessage()">➤</button>
     </div>
-    <div class="f-drawer-header-help">
-        Your assistant for analyzing and visualizing key business insights
-    </div>
-    <div class="customChatBotContainer" id="dataAnalystContainer"></div>
 </div>
 
-<script type="text/javascript">
-    const dataAnalystSupportNativeChatbotPage = async () => {
-        try {
-            const embeddingContext = await microstrategy.embeddingContexts.embedBotConsumptionPage({
-                serverUrl: 'https://analytics.franconnectuat.net/MicroStrategyLibrary',
-                projectId: '281E0C8411EADEE0A8090080EF659A26',
-                objectId: '6411E10471497156AE522F87AEB0D9F5',
-                customApplicationId: 'C2B2023642F6753A2EF159A75E0CFF29',
-                placeholder: document.getElementById('dataAnalystContainer'),
-                customAuthenticationType: microstrategy.dossier.CustomAuthenticationType.IDENTITY_TOKEN,
-                enableCustomAuthentication: true,
-                getLoginToken: async function login() {
-                        return 'eyJ6aXAiOiJERUYiLCJhbGciOiJIUzUxMiJ9.eJwt0reSozAAgOF3cb3MIBkRtgMMOJAWgwkNQxYGjEWwhW_u3W-La__5yv_Pbl5237v-zhe1rsxB4a_DSbgDo39dikSbtwpd2SlHUthujEO92i7jH4Xgzz2fQt9ppnB19UaODkSpXi-ygpmB6-p1_PlpFxJib5A32DJOrkTWNzgRJqWdhdhuQsAEKQIQU77g26X15tCqSXivdFekDw00dRAUebK3xExC8DF8ZAM76-LoFfci4fHsWPknH93AVwMvm4YK6xQZtu2TePMOZnr5Kbc978AtEMlCczeixpiK8_t5sQ5zwk_gogR5XIac7KcGBKo-Fjd842dow0zwm5QtRmBY-SmcUA73I33wWtPGWRIdJ0A00oVNQlgrqDV8jip69JdUhnM9jreGxoILWcy1Q2QuuL61vv8521H7wTR-ytNiu8677uiBVTnaNHGgv43u8UwT6JgRJzJW_xL7keZOTWU_sZ3RysLL5-3JU4EGjcuvx9P9lj0XeVLrqXH4MYpTbFR5gg0d2UM2gAeB4Hjomf4caSvuFdO2Dp2D0eOt-BClYCzUGbfbvGX1Gi4lxgUP3Otby2xVYIIKxAvsw9ZwtyuR3KeaMt516pie2KymXM1KPGqmdXsUYQlNE3dd9irKeve1m9f8dyQdciKCPKfsOUlTORYIAtjvZfUgyqoOefQLK_rcfQOBE0VJABL42rXZ8j_wnCCBv_8Ac0vYuA.U57PxGivJzp6cwG978f19BF2tKfhS4xKv01UaWhOgRP1ICBKZ6udZbxR495yX0MqzGaZf7iUGwAcBkpOiRYjOg';
-                    },
-
-                customUi: {
-                    botConsumption: {
-                        snapshot: { enabled: true },
-                        topicsPanel: { enabled: true }
-                    }
-                }
-            });
-
-            embeddingContext.addCustomErrorHandler((err) => {
-                console.error("Error in embedding context:", err);
-            });
-
-        } catch (err) {
-            console.error("Error in chatbot page initialization:", err);
-            console.log(err);
-        }
-    };
-
-
-    function showDataAnalystContainer() {
-        $('#DataAnalystBoatContainer').toggle();
-        $('.f-frannie-intro').hide();
-        dataAnalystSupportNativeChatbotPage();
-    }
-
-    function closeChatBoat(e) {
-        $(e).closest('.f-drawer-body').hide();
-        $('.f-frannie-intro').show();
-    }
-
-    $(document).ready(function() {
-        showDataAnalystContainer();
-    });
-
-</script>
+<script src="script.js"></script>
 </body>
 </html>
+
+
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>-->
+<!--    <script type="text/javascript" src="https://analytics.franconnectuat.net/MicroStrategyLibrary/javascript/embeddinglib.js"></script>-->
+<!--</head>-->
+<!--<body>-->
+<!--<div class="f-drawer-body f-char-coat-container" id="DataAnalystBoatContainer" style="display: none;">-->
+<!--    <div class="f-drawer-header fc&#45;&#45;flex">-->
+<!--        <div class="svg-icon icon-size-24" data-svg-role="f-ai"></div>-->
+<!--        <div class="fc&#45;&#45;flex-2 fc&#45;&#45;flex-v-center">Data Analyst</div>-->
+<!--        <div class="f-close-button f-close-drawer" onclick="closeChatBoat(this);">X</div>-->
+<!--    </div>-->
+<!--    <div class="f-drawer-header-help">-->
+<!--        Your assistant for analyzing and visualizing key business insights-->
+<!--    </div>-->
+<!--    <div class="customChatBotContainer" id="dataAnalystContainer"></div>-->
+<!--</div>-->
+
+<!--<script type="text/javascript">-->
+<!--    const dataAnalystSupportNativeChatbotPage = async () => {-->
+<!--        try {-->
+<!--            const embeddingContext = await microstrategy.embeddingContexts.embedBotConsumptionPage({-->
+<!--                serverUrl: 'https://analytics.franconnectuat.net/MicroStrategyLibrary',-->
+<!--                projectId: '281E0C8411EADEE0A8090080EF659A26',-->
+<!--                objectId: '6411E10471497156AE522F87AEB0D9F5',-->
+<!--                customApplicationId: 'C2B2023642F6753A2EF159A75E0CFF29',-->
+<!--                placeholder: document.getElementById('dataAnalystContainer'),-->
+<!--                customAuthenticationType: microstrategy.dossier.CustomAuthenticationType.IDENTITY_TOKEN,-->
+<!--                enableCustomAuthentication: true,-->
+<!--                getLoginToken: async function login() {-->
+<!--                        return 'eyJ6aXAiOiJERUYiLCJhbGciOiJIUzUxMiJ9.eJwt0reSozAAgOF3cb3MIBkRtgMMOJAWgwkNQxYGjEWwhW_u3W-La__5yv_Pbl5237v-zhe1rsxB4a_DSbgDo39dikSbtwpd2SlHUthujEO92i7jH4Xgzz2fQt9ppnB19UaODkSpXi-ygpmB6-p1_PlpFxJib5A32DJOrkTWNzgRJqWdhdhuQsAEKQIQU77g26X15tCqSXivdFekDw00dRAUebK3xExC8DF8ZAM76-LoFfci4fHsWPknH93AVwMvm4YK6xQZtu2TePMOZnr5Kbc978AtEMlCczeixpiK8_t5sQ5zwk_gogR5XIac7KcGBKo-Fjd842dow0zwm5QtRmBY-SmcUA73I33wWtPGWRIdJ0A00oVNQlgrqDV8jip69JdUhnM9jreGxoILWcy1Q2QuuL61vv8521H7wTR-ytNiu8677uiBVTnaNHGgv43u8UwT6JgRJzJW_xL7keZOTWU_sZ3RysLL5-3JU4EGjcuvx9P9lj0XeVLrqXH4MYpTbFR5gg0d2UM2gAeB4Hjomf4caSvuFdO2Dp2D0eOt-BClYCzUGbfbvGX1Gi4lxgUP3Otby2xVYIIKxAvsw9ZwtyuR3KeaMt516pie2KymXM1KPGqmdXsUYQlNE3dd9irKeve1m9f8dyQdciKCPKfsOUlTORYIAtjvZfUgyqoOefQLK_rcfQOBE0VJABL42rXZ8j_wnCCBv_8Ac0vYuA.U57PxGivJzp6cwG978f19BF2tKfhS4xKv01UaWhOgRP1ICBKZ6udZbxR495yX0MqzGaZf7iUGwAcBkpOiRYjOg';-->
+<!--                    },-->
+
+<!--                customUi: {-->
+<!--                    botConsumption: {-->
+<!--                        snapshot: { enabled: true },-->
+<!--                        topicsPanel: { enabled: true }-->
+<!--                    }-->
+<!--                }-->
+<!--            });-->
+
+<!--            embeddingContext.addCustomErrorHandler((err) => {-->
+<!--                console.error("Error in embedding context:", err);-->
+<!--            });-->
+
+<!--        } catch (err) {-->
+<!--            console.error("Error in chatbot page initialization:", err);-->
+<!--            console.log(err);-->
+<!--        }-->
+<!--    };-->
+
+
+<!--    function showDataAnalystContainer() {-->
+<!--        $('#DataAnalystBoatContainer').toggle();-->
+<!--        $('.f-frannie-intro').hide();-->
+<!--        dataAnalystSupportNativeChatbotPage();-->
+<!--    }-->
+
+<!--    function closeChatBoat(e) {-->
+<!--        $(e).closest('.f-drawer-body').hide();-->
+<!--        $('.f-frannie-intro').show();-->
+<!--    }-->
+
+<!--    $(document).ready(function() {-->
+<!--        showDataAnalystContainer();-->
+<!--    });-->
+
+<!--</script>-->
+<!--</body>-->
+<!--</html>-->
 
 
